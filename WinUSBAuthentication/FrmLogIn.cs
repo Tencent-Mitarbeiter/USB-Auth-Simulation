@@ -28,8 +28,7 @@ namespace WinUSBAuthentication
         {
             InitializeComponent();
             dbcon = new DBase(dbserver, dbdataBase, dbuser, dbpw);
-            User user = dbcon.GetByPassword("willi", "HUII");
-            Console.WriteLine();
+          //  User user = dbcon.GetByPassword("willi", "HUII");
             //Console.WriteLine(dbcon.AddUSBID("USB\\VID_4872&PID_81F1\\0X0001", "test9"));
         }
 
@@ -93,7 +92,8 @@ namespace WinUSBAuthentication
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-
+            //show password on Login Form
+            tbPassword.PasswordChar = cbshowPassword.Checked ? '\0' : '*';
         }
 
         private void lregister_Click(object sender, EventArgs e)

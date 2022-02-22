@@ -72,5 +72,11 @@ namespace WinUSBAuthentication
         {
             this.Close();
         }
+
+        private void cbshowPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            //show password on CreateYubikey Form
+            tbConfPassword.PasswordChar = cbshowPassword.Checked ? '\0' : '*';
+        }
     }
 }

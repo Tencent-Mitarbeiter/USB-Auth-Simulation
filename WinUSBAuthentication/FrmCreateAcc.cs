@@ -42,17 +42,10 @@ namespace WinUSBAuthentication
 
         private void cbshowPassword_CheckedChanged(object sender, EventArgs e)
         {
-            if(cbshowPassword.Checked)
-            {
-                tbPassword.PasswordChar = '\0';
-                tbConfPassword.PasswordChar = '\0';
-            }
-            else
-            {
-                tbPassword.PasswordChar = '*';
-                tbConfPassword.PasswordChar = '*';
-            }
-            
+            //show password on CreateAcc Form
+            tbConfPassword.PasswordChar = cbshowPassword.Checked ? '\0' : '*';
+            tbPassword.PasswordChar = cbshowPassword.Checked ? '\0' : '*';
+
         }
     }
 }

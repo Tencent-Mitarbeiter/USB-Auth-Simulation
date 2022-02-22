@@ -197,6 +197,7 @@
             this.cbshowPassword.TabIndex = 42;
             this.cbshowPassword.Text = "Show Passwords";
             this.cbshowPassword.UseVisualStyleBackColor = true;
+            this.cbshowPassword.CheckedChanged += new System.EventHandler(this.cbshowPassword_CheckedChanged);
             // 
             // panel3
             // 
