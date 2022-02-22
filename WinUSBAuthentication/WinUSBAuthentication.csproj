@@ -87,6 +87,7 @@
       <DependentUpon>succsess.cs</DependentUpon>
     </Compile>
     <Compile Include="USBConnector.cs" />
+    <Compile Include="User.cs" />
     <EmbeddedResource Include="error.resx">
       <DependentUpon>error.cs</DependentUpon>
     </EmbeddedResource>
