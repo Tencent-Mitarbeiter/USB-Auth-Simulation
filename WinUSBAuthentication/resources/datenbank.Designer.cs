@@ -88,7 +88,7 @@ namespace WinUSBAuthentication.resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SELECT * FROM `usb-devices` u WHERE u.`username` = @uname AND  SHA2(CONCAT(@pw,u.`@pwsalt`),256) = u.`pwhash`; ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die SELECT * FROM `usb-devices` u WHERE u.`username` = @uname AND  SHA2(CONCAT(@pw,u.`pwsalt`),256) = u.`pwhash`; ähnelt.
         /// </summary>
         internal static string selectByPassword {
             get {
