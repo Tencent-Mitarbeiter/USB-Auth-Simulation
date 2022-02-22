@@ -67,7 +67,6 @@ D:\Schule Unterricht Materialien\IA3B\Feacher\PROG\C#\GIT-Projekte\Tencent-Mitar
 D:\Schule Unterricht Materialien\IA3B\Feacher\PROG\C#\GIT-Projekte\Tencent-Mitarbeiter\USB-Auth-Simulation\WinUSBAuthentication\bin\Debug\System.Buffers.dll
 D:\Schule Unterricht Materialien\IA3B\Feacher\PROG\C#\GIT-Projekte\Tencent-Mitarbeiter\USB-Auth-Simulation\WinUSBAuthentication\bin\Debug\K4os.Compression.LZ4.dll
 D:\Schule Unterricht Materialien\IA3B\Feacher\PROG\C#\GIT-Projekte\Tencent-Mitarbeiter\USB-Auth-Simulation\WinUSBAuthentication\bin\Debug\K4os.Hash.xxHash.dll
-D:\Schule Unterricht Materialien\IA3B\Feacher\PROG\C#\GIT-Projekte\Tencent-Mitarbeiter\USB-Auth-Simulation\WinUSBAuthentication\bin\Debug\System.Numerics.Vectors.dll
 D:\Schule Unterricht Materialien\IA3B\Feacher\PROG\C#\GIT-Projekte\Tencent-Mitarbeiter\USB-Auth-Simulation\WinUSBAuthentication\bin\Debug\MySql.Data.xml
 D:\Schule Unterricht Materialien\IA3B\Feacher\PROG\C#\GIT-Projekte\Tencent-Mitarbeiter\USB-Auth-Simulation\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.csproj.AssemblyReference.cache
 D:\Schule Unterricht Materialien\IA3B\Feacher\PROG\C#\GIT-Projekte\Tencent-Mitarbeiter\USB-Auth-Simulation\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.exe.config
@@ -83,3 +82,4 @@ D:\Schule Unterricht Materialien\IA3B\Feacher\PROG\C#\GIT-Projekte\Tencent-Mitar
 D:\Schule Unterricht Materialien\IA3B\Feacher\PROG\C#\GIT-Projekte\Tencent-Mitarbeiter\USB-Auth-Simulation\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.csproj.CopyComplete
 D:\Schule Unterricht Materialien\IA3B\Feacher\PROG\C#\GIT-Projekte\Tencent-Mitarbeiter\USB-Auth-Simulation\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.exe
 D:\Schule Unterricht Materialien\IA3B\Feacher\PROG\C#\GIT-Projekte\Tencent-Mitarbeiter\USB-Auth-Simulation\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.pdb
+D:\Schule Unterricht Materialien\IA3B\Feacher\PROG\C#\GIT-Projekte\Tencent-Mitarbeiter\USB-Auth-Simulation\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.csproj.SuggestedBindingRedirects.cache

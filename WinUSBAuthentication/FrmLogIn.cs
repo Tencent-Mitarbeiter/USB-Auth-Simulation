@@ -15,9 +15,9 @@ namespace WinUSBAuthentication
 
     public partial class FrmLogIn : Form
     {
-        private string dbserver = "192.168.235.166";
+        private string dbserver = "localhost";
         private string dbdataBase = "usb-database";
-        private string dbuser = "yeeeeeeeeeeeeet";
+        private string dbuser = "root";
         private string dbpw = "";
 
         private DBase dbcon;
@@ -28,6 +28,9 @@ namespace WinUSBAuthentication
         {
             InitializeComponent();
             dbcon = new DBase(dbserver, dbdataBase, dbuser, dbpw);
+            User user = dbcon.GetByPassword("willi", "HUII");
+            Console.WriteLine();
+            //Console.WriteLine(dbcon.AddUSBID("USB\\VID_4872&PID_81F1\\0X0001", "test9"));
         }
 
         /// <summary>
