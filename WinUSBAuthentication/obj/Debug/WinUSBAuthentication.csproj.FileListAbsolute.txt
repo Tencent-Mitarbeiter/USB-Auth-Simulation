@@ -1,0 +1,56 @@
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\WinUSBAuthentication.exe.config
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\WinUSBAuthentication.exe
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\WinUSBAuthentication.pdb
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.csproj.AssemblyReference.cache
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.csproj.SuggestedBindingRedirects.cache
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.FrmLogIn.resources
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.Properties.Resources.resources
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.csproj.GenerateResource.cache
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.csproj.CoreCompileInputs.cache
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.exe
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.pdb
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.exe.config
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.resources.datenbank.resources
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\MySql.Data.dll
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\Google.Protobuf.dll
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\ZstdNet.dll
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\System.Memory.dll
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\System.Buffers.dll
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\MySql.Data.xml
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.csproj.CopyComplete
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\WinUSBAuthentication.exe.config
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\WinUSBAuthentication.exe
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\WinUSBAuthentication.pdb
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\MySql.Data.dll
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\Google.Protobuf.dll
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\ZstdNet.dll
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\System.Memory.dll
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\System.Buffers.dll
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\bin\Debug\MySql.Data.xml
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.csproj.AssemblyReference.cache
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.csproj.SuggestedBindingRedirects.cache
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.exe.config
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.FrmLogIn.resources
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.Properties.Resources.resources
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.resources.datenbank.resources
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.csproj.GenerateResource.cache
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.csproj.CoreCompileInputs.cache
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.csproj.CopyComplete
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.exe
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.pdb
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.FrmCreateYubiKey.resources
+C:\Users\felix\Downloads\Neuer Ordner\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.FrmCreateAcc.resources
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.error.resources
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.FrmCreateAcc.resources
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.FrmCreateYubiKey.resources
+C:\Users\FS14\OneDrive\Desktop\WinUSBAuthentication\WinUSBAuthentication\obj\Debug\WinUSBAuthentication.succsess.resources
