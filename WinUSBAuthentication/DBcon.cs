@@ -48,7 +48,7 @@ namespace WinUSBAuthentication
             
             return hans;
         }
-
+        /*
         //public bool AddUSBID(USBDevice usb)
         public bool AddUSBID(String usb, String name, String pwhash, String pwsalt)
         {
@@ -87,7 +87,7 @@ namespace WinUSBAuthentication
                 return true;
             }
             return false;
-        }
+        }*/
 
 
         public User GetByPassword(string username, string password)
@@ -105,6 +105,8 @@ namespace WinUSBAuthentication
                 return User.Create(r);
             }
 
+            CloseConnection();
+
             return null;
         }
 
@@ -121,6 +123,8 @@ namespace WinUSBAuthentication
             {
                 return User.Create(r);
             }
+
+            CloseConnection();
 
             return null;
         }
