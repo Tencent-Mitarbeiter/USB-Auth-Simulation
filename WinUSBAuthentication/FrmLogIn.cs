@@ -98,7 +98,7 @@ namespace WinUSBAuthentication
 
         private void lregister_Click(object sender, EventArgs e)
         {
-            FrmCreateAcc frmca = new FrmCreateAcc();
+            FrmCreateAcc frmca = new FrmCreateAcc(dbcon);
 
             this.Hide();
             frmca.ShowDialog();
