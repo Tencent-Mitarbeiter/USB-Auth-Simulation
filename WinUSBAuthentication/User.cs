@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WinUSBAuthentication
 {
-    internal class User
+    public class User
     {
         public String Name { get; private set; }
         public String UsbID { get; private set; }

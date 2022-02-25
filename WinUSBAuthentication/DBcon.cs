@@ -14,7 +14,7 @@ using System.Security.Cryptography;
 
 namespace WinUSBAuthentication
 {
-    class DBase
+    public class DBase
     {
         private MySqlConnection con;
 

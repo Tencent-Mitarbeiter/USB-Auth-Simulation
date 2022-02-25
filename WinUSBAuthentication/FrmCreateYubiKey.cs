@@ -16,10 +16,12 @@ namespace WinUSBAuthentication
 
         private USBConnector usb;
 
+        DBase dbcon;
 
-        public FrmCreateYubiKey()
+        public FrmCreateYubiKey(DBase dbcon)
         {
             InitializeComponent();
+            this.dbcon = dbcon;
         }
 
         /// <summary>
@@ -43,7 +45,7 @@ namespace WinUSBAuthentication
 
         private void lYkeybackr_Click(object sender, EventArgs e)
         {
-            FrmCreateAcc frmca = new FrmCreateAcc();
+            FrmCreateAcc frmca = new FrmCreateAcc(dbcon);
 
             this.Hide();
             frmca.ShowDialog();

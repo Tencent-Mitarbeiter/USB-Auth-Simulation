@@ -12,7 +12,10 @@ namespace WinUSBAuthentication
 {
     public partial class FrmCreateAcc : Form
     {
-        public FrmCreateAcc()
+
+        DBase dbcon;
+        
+        public FrmCreateAcc(DBase dbcon)
         {
             InitializeComponent();
         }
@@ -28,7 +31,7 @@ namespace WinUSBAuthentication
 
         private void lregYubiKey_Click(object sender, EventArgs e)
         {
-            FrmCreateYubiKey frmcyk = new FrmCreateYubiKey();
+            FrmCreateYubiKey frmcyk = new FrmCreateYubiKey(dbcon);
             this.Hide();
             frmcyk.ShowDialog();
             this.Close();
@@ -45,6 +48,28 @@ namespace WinUSBAuthentication
             //show password on CreateAcc Form
             tbConfPassword.PasswordChar = cbshowPassword.Checked ? '\0' : '*';
             tbPassword.PasswordChar = cbshowPassword.Checked ? '\0' : '*';
+
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+
+            if (tbPassword.Text.Equals(tbConfPassword.Text))
+            {
+                try
+                {
+                    dbcon.CreateUser(tbusername.Text, tbConfPassword.Text);
+                } catch 
+                {
+                    MessageBox.Show("", "DB Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Die beiden Passwörter stimmen nicht überein!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
 
         }
     }
