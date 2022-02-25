@@ -35,7 +35,7 @@
             this.lregister = new System.Windows.Forms.Label();
             this.panelMoveFormLogin = new System.Windows.Forms.Panel();
             this.lblClose = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbUserName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -117,16 +117,16 @@
             this.lblClose.Text = "x";
             this.lblClose.Click += new System.EventHandler(this.OnCloseButtonClicked);
             // 
-            // textBox2
+            // tbUserName
             // 
-            this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(3, 3);
-            this.textBox2.MaxLength = 24;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(254, 28);
-            this.textBox2.TabIndex = 10;
+            this.tbUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
+            this.tbUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbUserName.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUserName.Location = new System.Drawing.Point(3, 3);
+            this.tbUserName.MaxLength = 24;
+            this.tbUserName.Name = "tbUserName";
+            this.tbUserName.Size = new System.Drawing.Size(254, 28);
+            this.tbUserName.TabIndex = 10;
             // 
             // label1
             // 
@@ -154,7 +154,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(222)))), ((int)(((byte)(222)))));
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.tbUserName);
             this.panel1.Location = new System.Drawing.Point(50, 242);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(260, 36);
@@ -206,6 +206,7 @@
             this.btnLogin.TabIndex = 18;
             this.btnLogin.Text = "login";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
             // 
             // FrmLogIn
             // 
@@ -249,7 +250,7 @@
         private System.Windows.Forms.Label lregister;
         private System.Windows.Forms.Panel panelMoveFormLogin;
         private System.Windows.Forms.Label lblClose;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbUserName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;

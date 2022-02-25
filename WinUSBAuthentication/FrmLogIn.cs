@@ -28,7 +28,7 @@ namespace WinUSBAuthentication
         {
             InitializeComponent();
             dbcon = new DBase(dbserver, dbdataBase, dbuser, dbpw);
-          //  User user = dbcon.GetByPassword("willi", "HUII");
+            
             //Console.WriteLine(dbcon.AddUSBID("USB\\VID_4872&PID_81F1\\0X0001", "test9"));
         }
 
@@ -104,6 +104,12 @@ namespace WinUSBAuthentication
             frmca.ShowDialog();
             this.Close();
         }
-            
+
+        private void btnLogin_Click_1(object sender, EventArgs e)
+            //ich will nach hause
+        {
+            User user = dbcon.GetByPassword(tbUserName.ToString(), tbPassword.ToString()) ?? throw new ArgumentNullException(nameof(user), "User cannot be null"); ;
+
+        }
     }
 }
