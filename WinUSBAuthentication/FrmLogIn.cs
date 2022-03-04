@@ -52,10 +52,7 @@ namespace WinUSBAuthentication
 
         private void OnCloseButtonClicked(object sender, EventArgs e) => this.Close();
 
-        private void OnFormLoad(object sender, EventArgs e)
-        {
-            usb = new USBConnector(this.OnUsbChange);
-        }
+        private void OnFormLoad(object sender, EventArgs e) => usb = new USBConnector(this.OnUsbChange);
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
@@ -106,10 +103,24 @@ namespace WinUSBAuthentication
         }
 
         private void btnLogin_Click_1(object sender, EventArgs e)
-            //ich will nach hause
+        //ich will nach hause
         {
-            User user = dbcon.GetByPassword(tbUserName.ToString(), tbPassword.ToString()) ?? throw new ArgumentNullException(nameof(user), "User cannot be null"); ;
+            if (tbUserName.Text == "" || tbPassword.Text == "")
+            {
+                MessageBox.Show("Das Feld Username oder Password dürfen nicht leer sein", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            try
+            {
+                User user = dbcon.GetByPassword(tbUserName.Text.ToString(), tbPassword.Text.ToString()) ?? throw new ArgumentNullException(nameof(user), "User cannot be null");
+                MessageBox.Show("Erfolgreich Eingeloggt", "UIIIIIIIIIIIIII", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "DB Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dbcon.CloseConnection();
+            }
         }
     }
 }

@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="addYubiKey" xml:space="preserve">
+    <value>UPDATE usb-devices SET `USB-ID` = @yubikey WHERE username = @username AND pwhash = SHA2(CONCAT(@pw, pwsalt), 256);</value>
+  </data>
   <data name="createUser" xml:space="preserve">
-    <value>INSERT INTO `usb-devices` (`ID`, `USB-ID`, `username`, `pwhash`, `pwsalt`) VALUES (NULL, @usb, '{@name}', '{SHA2(CONCAT(@pw,u.`@pwsalt`),256)}, '{@pwsalt}');</value>
+    <value>INSERT INTO `usb-devices` (`ID`, `USB-ID`, `username`, `pwhash`, `pwsalt`) VALUES (NULL, @usb, @name, SHA2(CONCAT(@pw, @pwsalt),256), @pwsalt);</value>
   </data>
   <data name="insertUSB" xml:space="preserve">
-    <value>INSERT INTO `usb-devices` (`ID`, `USB-ID`, `username`, `pwhash`, `pwsalt`) VALUES (NULL, '{@usb}', '{@name}', '{@pwhash}, '{@pwsalt}');</value>
+    <value>INSERT INTO `usb-devices` (`ID`, `USB-ID`, `username`, `pwhash`, `pwsalt`) VALUES (NULL, @usb, @name, @pwhash, @pwsalt);</value>
     <comment>Erstellt neues USB Devices</comment>
   </data>
   <data name="selecctYubiKey" xml:space="preserve">

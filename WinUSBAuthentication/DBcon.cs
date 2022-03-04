@@ -139,9 +139,9 @@ namespace WinUSBAuthentication
             }
 
             con.Open();
-            MySqlCommand cmd = new MySqlCommand(datenbank.selecctYubiKey, con);
+            MySqlCommand cmd = new MySqlCommand(datenbank.createUser, con);
             cmd.Parameters.AddWithValue("@name", username);
-            cmd.Parameters.AddWithValue("@pwhash", password);
+            cmd.Parameters.AddWithValue("@pw", password);
             cmd.Parameters.AddWithValue("@pwsalt", pwsalt);
             cmd.Parameters.AddWithValue("@usb", "NULL");
             cmd.Prepare();
@@ -162,6 +162,22 @@ namespace WinUSBAuthentication
 
             // Nutzer speichern (Mit gehashtem passwort & random salt)
             // Return user-id
+        }
+
+        public int AddYubiKey(String username, String password, String yubikey)
+        {
+            con.Open();
+            MySqlCommand cmd = new MySqlCommand(datenbank.addYubiKey, con);
+            cmd.Parameters.AddWithValue("@yubikey", yubikey);
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.Parameters.AddWithValue("@pw", password);
+            cmd.Prepare();
+
+            int rowsaffected = cmd.ExecuteNonQuery();
+
+            CloseConnection();
+
+            return rowsaffected;
         }
 
 

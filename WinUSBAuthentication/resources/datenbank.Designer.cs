@@ -61,7 +61,16 @@ namespace WinUSBAuthentication.resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die INSERT INTO `usb-devices` (`ID`, `USB-ID`, `username`, `pwhash`, `pwsalt`) VALUES (NULL, @usb, &apos;{@name}&apos;, &apos;{SHA2(CONCAT(@pw,u.`@pwsalt`),256)}, &apos;{@pwsalt}&apos;); ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die UPDATE usb-devices SET `USB-ID` = @yubikey WHERE username = @username AND pwhash = SHA2(CONCAT(@pw, pwsalt), 256); ähnelt.
+        /// </summary>
+        internal static string addYubiKey {
+            get {
+                return ResourceManager.GetString("addYubiKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die INSERT INTO `usb-devices` (`ID`, `USB-ID`, `username`, `pwhash`, `pwsalt`) VALUES (NULL, @usb, @name, SHA2(CONCAT(@pw, @pwsalt),256), @pwsalt); ähnelt.
         /// </summary>
         internal static string createUser {
             get {
@@ -70,7 +79,7 @@ namespace WinUSBAuthentication.resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die INSERT INTO `usb-devices` (`ID`, `USB-ID`, `username`, `pwhash`, `pwsalt`) VALUES (NULL, &apos;{@usb}&apos;, &apos;{@name}&apos;, &apos;{@pwhash}, &apos;{@pwsalt}&apos;); ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die INSERT INTO `usb-devices` (`ID`, `USB-ID`, `username`, `pwhash`, `pwsalt`) VALUES (NULL, @usb, @name, @pwhash, @pwsalt); ähnelt.
         /// </summary>
         internal static string insertUSB {
             get {

@@ -18,6 +18,7 @@ namespace WinUSBAuthentication
         public FrmCreateAcc(DBase dbcon)
         {
             InitializeComponent();
+            this.dbcon = dbcon;
         }
 
         private void lCAccBack_Click(object sender, EventArgs e)
@@ -53,24 +54,32 @@ namespace WinUSBAuthentication
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-
-            if (tbPassword.Text.Equals(tbConfPassword.Text))
-            {
-                try
-                {
-                    dbcon.CreateUser(tbusername.Text, tbConfPassword.Text);
-                } catch 
-                {
-                    MessageBox.Show("", "DB Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
+            if (!tbPassword.Text.Equals(tbConfPassword.Text))
             {
                 MessageBox.Show("Die beiden Passwörter stimmen nicht überein!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
+            if (!(tbusername.Text != "" && tbPassword.Text != "" && tbConfPassword.Text != ""))
+            {
+                MessageBox.Show("Bitte füllen sie alle Textboxen!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-
+            try
+            {
+                dbcon.CreateUser(tbusername.Text, tbConfPassword.Text);
+                MessageBox.Show("Der benutzer wurde Angelegt!", "Benutzer Erstellt", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                FrmLogIn frmli = new FrmLogIn();
+                this.Hide();
+                frmli.ShowDialog();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "DB Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dbcon.CloseConnection();
+            }
         }
     }
 }

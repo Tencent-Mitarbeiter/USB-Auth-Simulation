@@ -54,7 +54,20 @@ namespace WinUSBAuthentication
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            if (tbUsername.Text != "" && tbPassword.Text != "")
+            {
+                MessageBox.Show("", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
+            try
+            {
+                dbcon.AddYubiKey(tbUsername.Text, tbPassword.Text, cbUSB.SelectedItem.ToString());
+            }catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "");
+                dbcon.CloseConnection();
+            }
         }
  
         private void OnUsbChange(USBDevice _=null) => Invoke(new Action(() => {
@@ -78,7 +91,7 @@ namespace WinUSBAuthentication
         private void cbshowPassword_CheckedChanged(object sender, EventArgs e)
         {
             //show password on CreateYubikey Form
-            tbConfPassword.PasswordChar = cbshowPassword.Checked ? '\0' : '*';
+            tbPassword.PasswordChar = cbshowPassword.Checked ? '\0' : '*';
         }
     }
 }
