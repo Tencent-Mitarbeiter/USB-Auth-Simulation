@@ -43,6 +43,7 @@
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.cbshowPassword = new System.Windows.Forms.CheckBox();
             this.btnLogin = new System.Windows.Forms.Button();
+            this.bAddYKey = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.panelMoveFormLogin.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -87,7 +88,7 @@
             this.lregister.AutoSize = true;
             this.lregister.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lregister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(94)))), ((int)(((byte)(172)))));
-            this.lregister.Location = new System.Drawing.Point(84, 533);
+            this.lregister.Location = new System.Drawing.Point(82, 607);
             this.lregister.Name = "lregister";
             this.lregister.Size = new System.Drawing.Size(186, 21);
             this.lregister.TabIndex = 5;
@@ -97,9 +98,9 @@
             // panelMoveFormLogin
             // 
             this.panelMoveFormLogin.Controls.Add(this.lblClose);
-            this.panelMoveFormLogin.Location = new System.Drawing.Point(-2, 0);
+            this.panelMoveFormLogin.Location = new System.Drawing.Point(0, 0);
             this.panelMoveFormLogin.Name = "panelMoveFormLogin";
-            this.panelMoveFormLogin.Size = new System.Drawing.Size(364, 44);
+            this.panelMoveFormLogin.Size = new System.Drawing.Size(362, 44);
             this.panelMoveFormLogin.TabIndex = 8;
             this.panelMoveFormLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelMoveFormLogin_MouseDown);
             this.panelMoveFormLogin.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelMoveFormLogin_MouseMove);
@@ -145,7 +146,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.label2.Location = new System.Drawing.Point(51, 496);
+            this.label2.Location = new System.Drawing.Point(49, 570);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(247, 20);
             this.label2.TabIndex = 13;
@@ -200,20 +201,35 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(50, 413);
+            this.btnLogin.Location = new System.Drawing.Point(47, 415);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(260, 56);
             this.btnLogin.TabIndex = 18;
-            this.btnLogin.Text = "login";
+            this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click_1);
+            // 
+            // bAddYKey
+            // 
+            this.bAddYKey.BackColor = System.Drawing.Color.White;
+            this.bAddYKey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bAddYKey.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAddYKey.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(94)))), ((int)(((byte)(172)))));
+            this.bAddYKey.Location = new System.Drawing.Point(47, 489);
+            this.bAddYKey.Name = "bAddYKey";
+            this.bAddYKey.Size = new System.Drawing.Size(260, 56);
+            this.bAddYKey.TabIndex = 19;
+            this.bAddYKey.Text = "Add Yubikey";
+            this.bAddYKey.UseVisualStyleBackColor = false;
+            this.bAddYKey.Click += new System.EventHandler(this.bAddYKey_Click);
             // 
             // FrmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(360, 594);
+            this.ClientSize = new System.Drawing.Size(360, 664);
+            this.Controls.Add(this.bAddYKey);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.cbshowPassword);
             this.Controls.Add(this.panel2);
@@ -258,6 +274,7 @@
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.CheckBox cbshowPassword;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button bAddYKey;
     }
 }
 

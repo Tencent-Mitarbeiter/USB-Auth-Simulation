@@ -32,7 +32,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lBackToLogin = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
@@ -62,22 +62,23 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(180)))), ((int)(((byte)(180)))));
-            this.label1.Location = new System.Drawing.Point(40, 243);
+            this.label1.Location = new System.Drawing.Point(39, 243);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(262, 25);
+            this.label1.Size = new System.Drawing.Size(265, 25);
             this.label1.TabIndex = 23;
-            this.label1.Text = "account created successfully";
+            this.label1.Text = "Account created successfully";
             // 
-            // label2
+            // lBackToLogin
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(94)))), ((int)(((byte)(172)))));
-            this.label2.Location = new System.Drawing.Point(100, 282);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 25);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "back to login";
+            this.lBackToLogin.AutoSize = true;
+            this.lBackToLogin.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lBackToLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(94)))), ((int)(((byte)(172)))));
+            this.lBackToLogin.Location = new System.Drawing.Point(100, 282);
+            this.lBackToLogin.Name = "lBackToLogin";
+            this.lBackToLogin.Size = new System.Drawing.Size(129, 25);
+            this.lBackToLogin.TabIndex = 24;
+            this.lBackToLogin.Text = "Back to login";
+            this.lBackToLogin.Click += new System.EventHandler(this.lBackToLogin_Click);
             // 
             // succsess
             // 
@@ -85,7 +86,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(350, 350);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lBackToLogin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.pictureBox1);
@@ -104,6 +105,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lBackToLogin;
     }
 }

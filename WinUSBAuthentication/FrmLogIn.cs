@@ -98,7 +98,7 @@ namespace WinUSBAuthentication
 
         private void lregister_Click(object sender, EventArgs e)
         {
-            FrmCreateAcc frmca = new FrmCreateAcc();
+            FrmCreateAcc frmca = new FrmCreateAcc(dbcon);
 
             this.Hide();
             frmca.ShowDialog();
@@ -110,6 +110,14 @@ namespace WinUSBAuthentication
         {
             User user = dbcon.GetByPassword(tbUserName.ToString(), tbPassword.ToString()) ?? throw new ArgumentNullException(nameof(user), "User cannot be null"); ;
 
+        }
+
+        private void bAddYKey_Click(object sender, EventArgs e)
+        {
+            FrmCreateYubiKey frmcyk = new FrmCreateYubiKey(dbcon);
+            this.Hide();
+            frmcyk.ShowDialog();
+            this.Close();
         }
     }
 }

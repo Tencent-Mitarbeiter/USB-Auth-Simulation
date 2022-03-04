@@ -16,5 +16,13 @@ namespace WinUSBAuthentication
         {
             InitializeComponent();
         }
+
+        private void lTryAgain_Click(object sender, EventArgs e)
+        {
+            FrmLogIn frmli = new FrmLogIn();
+            this.Hide();
+            frmli.ShowDialog();
+            this.Close();
+        }
     }
 }

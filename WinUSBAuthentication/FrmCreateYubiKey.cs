@@ -80,5 +80,29 @@ namespace WinUSBAuthentication
             //show password on CreateYubikey Form
             tbConfPassword.PasswordChar = cbshowPassword.Checked ? '\0' : '*';
         }
+
+        int mov;
+        int movX;
+        int movY;
+
+        private void panelMoveFormCYKey_MouseDown(object sender, MouseEventArgs e)
+        {
+            mov = 1;
+            movX = e.X;
+            movY = e.Y;
+        }
+
+        private void panelMoveFormCYKey_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mov == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - movX, MousePosition.Y - movY);
+            }
+        }
+
+        private void panelMoveFormCYKey_MouseUp(object sender, MouseEventArgs e)
+        {
+            mov = 0;
+        }
     }
 }
