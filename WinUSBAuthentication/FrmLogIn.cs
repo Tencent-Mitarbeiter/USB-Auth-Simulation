@@ -122,5 +122,13 @@ namespace WinUSBAuthentication
                 dbcon.CloseConnection();
             }
         }
+
+        private void bAddYKey_Click(object sender, EventArgs e)
+        {
+            FrmCreateYubiKey frmcyk = new FrmCreateYubiKey(dbcon);
+            this.Hide();
+            frmcyk.ShowDialog();
+            this.Close();
+        }
     }
 }

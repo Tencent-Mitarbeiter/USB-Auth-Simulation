@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(error));
-            this.label2 = new System.Windows.Forms.Label();
+            this.lTryAgain = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -37,16 +37,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label2
+            // lTryAgain
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(94)))), ((int)(((byte)(172)))));
-            this.label2.Location = new System.Drawing.Point(122, 288);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 25);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Try Again";
+            this.lTryAgain.AutoSize = true;
+            this.lTryAgain.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lTryAgain.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(94)))), ((int)(((byte)(172)))));
+            this.lTryAgain.Location = new System.Drawing.Point(122, 288);
+            this.lTryAgain.Name = "lTryAgain";
+            this.lTryAgain.Size = new System.Drawing.Size(97, 25);
+            this.lTryAgain.TabIndex = 28;
+            this.lTryAgain.Text = "Try Again";
+            this.lTryAgain.Click += new System.EventHandler(this.lTryAgain_Click);
             // 
             // label1
             // 
@@ -87,7 +88,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 350);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lTryAgain);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.pictureBox1);
@@ -103,7 +104,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lTryAgain;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.PictureBox pictureBox1;
