@@ -113,8 +113,12 @@ namespace WinUSBAuthentication
 
             try
             {
-                User user = dbcon.GetByPassword(tbUserName.Text.ToString(), tbPassword.Text.ToString()) ?? throw new ArgumentNullException(nameof(user), "User cannot be null");
-                MessageBox.Show("Erfolgreich Eingeloggt", "UIIIIIIIIIIIIII", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                User user = dbcon.GetByPassword(tbUserName.Text.ToString(), tbPassword.Text.ToString());
+                
+                if(user == null)
+                    MessageBox.Show("(Nicht) Erfolgreich Eingeloggt", "Yeeeeeeeeeeeeeet", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                else
+                    MessageBox.Show("Erfolgreich Eingeloggt", "UIIIIIIIIIIIIII", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             catch (Exception ex)
             {

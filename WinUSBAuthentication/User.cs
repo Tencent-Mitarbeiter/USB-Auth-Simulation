@@ -16,7 +16,12 @@ namespace WinUSBAuthentication
 
         public static User Create(MySqlDataReader r)
         {
-           return new User() { Name = (String)r["username"], UsbID = (String)r["USB-ID"], Pwhash = (String)r["pwhash"], Pwsalt = (String)r["pwsalt"] }; 
+            return new User() {
+                Name = (String)r["username"], 
+                UsbID = r["USB-ID"] == DBNull.Value ? null : (String)r["USB-ID"], 
+                Pwhash = (String)r["pwhash"], 
+                Pwsalt = (String)r["pwsalt"] 
+            };
         }
     }
 }

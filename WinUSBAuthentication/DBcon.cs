@@ -102,9 +102,10 @@ namespace WinUSBAuthentication
 
             if (r.Read())
             {
-                return User.Create(r);
+                var user = User.Create(r);
+                CloseConnection();
+                return user;
             }
-
             CloseConnection();
 
             return null;
@@ -137,13 +138,13 @@ namespace WinUSBAuthentication
             {
                 pwsalt += (char)rdm.Next(1, 256);
             }
-
+            Console.WriteLine(datenbank.createUser);
             con.Open();
             MySqlCommand cmd = new MySqlCommand(datenbank.createUser, con);
             cmd.Parameters.AddWithValue("@name", username);
             cmd.Parameters.AddWithValue("@pw", password);
             cmd.Parameters.AddWithValue("@pwsalt", pwsalt);
-            cmd.Parameters.AddWithValue("@usb", "NULL");
+            cmd.Parameters.AddWithValue("@usb", null);
             cmd.Prepare();
 
             try
