@@ -134,6 +134,6 @@
     <value>SELECT * FROM `usb-devices` u WHERE u.`username` = @uname AND  SHA2(CONCAT(@pw,u.`pwsalt`),256) = u.`pwhash`;</value>
   </data>
   <data name="selectUSBID" xml:space="preserve">
-    <value>SELECT `USB-ID` FROM `usb-devices` WHERE `USB-ID` = @id</value>
+    <value>SELECT * FROM `usb-devices` WHERE `USB-ID` = @id</value>
   </data>
 </root>
