@@ -64,7 +64,9 @@ namespace WinUSBAuthentication
         protected override void WndProc(ref Message m)
         {
             base.WndProc(ref m);
-            usb?.OnMessage(ref m);
+
+            if (this.Visible)
+                usb?.OnMessage(ref m);
         }
 
         private void OnCloseButtonClicked(object sender, EventArgs e) => this.Close();

@@ -31,7 +31,8 @@ namespace WinUSBAuthentication
         protected override void WndProc(ref Message m)
         {
             base.WndProc(ref m);
-            usb?.OnMessage(ref m);
+            if (this.Visible)
+                usb?.OnMessage(ref m);
         }
 
         private void lYKeyBack_Click(object sender, EventArgs e)
@@ -62,8 +63,18 @@ namespace WinUSBAuthentication
 
             try
             {
-                dbcon.AddYubiKey(tbUsername.Text, tbPassword.Text, cbUSB.SelectedItem.ToString());
-            }catch (Exception ex)
+                var success = dbcon.AddYubiKey(tbUsername.Text, tbPassword.Text, cbUSB.SelectedItem.ToString()) >= 1;
+
+                if (success)
+                {
+                    MessageBox.Show("USB-ID Erfolgreich hinterlegt!", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    lYKeyBack_Click(null, null);
+
+                }else
+                    MessageBox.Show("USB-ID konnte nicht hinterlegt werden!", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                dbcon.CloseConnection();
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "");
                 dbcon.CloseConnection();
