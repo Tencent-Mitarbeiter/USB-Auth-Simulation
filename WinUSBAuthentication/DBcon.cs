@@ -174,6 +174,10 @@ namespace WinUSBAuthentication
             cmd.Parameters.AddWithValue("@pw", password);
             cmd.Prepare();
 
+            // Hier Crash
+
+            Console.WriteLine(cmd.CommandText);
+
             int rowsaffected = cmd.ExecuteNonQuery();
 
             CloseConnection();

@@ -61,7 +61,7 @@ namespace WinUSBAuthentication.resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die UPDATE usb-devices SET `USB-ID` = @yubikey WHERE username = @username AND pwhash = SHA2(CONCAT(@pw, pwsalt), 256); ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die UPDATE `usb-devices` SET `USB-ID` = @yubikey WHERE `username` = @username AND `pwhash` = SHA2(CONCAT(@pw, `pwsalt`), 256); ähnelt.
         /// </summary>
         internal static string addYubiKey {
             get {

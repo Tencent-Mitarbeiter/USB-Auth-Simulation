@@ -54,15 +54,15 @@ namespace WinUSBAuthentication
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (tbUsername.Text != "" && tbUsername.Text != "")
+            if (tbUsername.Text == "" && tbPassword.Text == "")
             {
-                MessageBox.Show("", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Die beiden Felder dürfen nicht leer sein!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             try
             {
-                dbcon.AddYubiKey(tbUsername.Text, tbUsername.Text, cbUSB.SelectedItem.ToString());
+                dbcon.AddYubiKey(tbUsername.Text, tbPassword.Text, cbUSB.SelectedItem.ToString());
             }catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "");
@@ -70,17 +70,17 @@ namespace WinUSBAuthentication
             }
         }
  
-        private void OnUsbChange(USBDevice _=null) => Invoke(new Action(() => {
+        private void OnUsbChange(IEnumerable<USBDevice> devices) => Invoke(new Action(() => {
             this.cbUSB.Items.Clear();
 
-            this.cbUSB.Items.AddRange(this.usb.CurrentDevices.ToArray());
+            this.cbUSB.Items.AddRange(devices.ToArray());
 
             this.cbUSB.SelectedIndex = 0;
         }));
 
         private void FrmCreateYubiKey_Load(object sender, EventArgs e)
         {
-            usb = new USBConnector(OnUsbChange,()=>OnUsbChange());
+            usb = new USBConnector(null, this.OnUsbChange, ()=>OnUsbChange(usb.CurrentDevices));
         }
 
         private void lblClose_Click(object sender, EventArgs e)
@@ -91,7 +91,7 @@ namespace WinUSBAuthentication
         private void cbshowPassword_CheckedChanged(object sender, EventArgs e)
         {
             //show password on CreateYubikey Form
-            tbUsername.PasswordChar = cbshowPassword.Checked ? '\0' : '*';
+            tbPassword.PasswordChar = cbshowPassword.Checked ? '\0' : '*';
         }
 
         int mov;

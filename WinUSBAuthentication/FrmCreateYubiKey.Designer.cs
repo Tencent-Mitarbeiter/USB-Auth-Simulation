@@ -221,6 +221,7 @@
             this.cbshowPassword.TabIndex = 43;
             this.cbshowPassword.Text = "Show Passwords";
             this.cbshowPassword.UseVisualStyleBackColor = true;
+            this.cbshowPassword.CheckedChanged += new System.EventHandler(this.cbshowPassword_CheckedChanged);
             // 
             // cbUSB
             // 
@@ -248,6 +249,7 @@
             this.btnLogin.TabIndex = 45;
             this.btnLogin.Text = "Add Yubikey";
             this.btnLogin.UseVisualStyleBackColor = false;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // FrmCreateYubiKey
             // 

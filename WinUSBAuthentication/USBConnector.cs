@@ -35,8 +35,12 @@ namespace USBDetect
         // Constants for the usb device
         private const int WM_DEVICECHANGE = 0x219;
 
-        // Callback when a usb device gets updated
+        // Callback when a single new usb device gets detected
         private readonly Action<USBDevice> onUSBChange;
+
+        // Callback when new usb devices have been added or removed (so just the generall list got updated)
+        private readonly Action<IEnumerable<USBDevice>> onListUpdate;
+
         // Callback when the first usb device load got executed
         private readonly Action onLoad;
 
@@ -44,10 +48,11 @@ namespace USBDetect
         public IEnumerable<USBDevice> CurrentDevices { get; private set; }
 
         /// <param name="onUSBChange">Event-callback when a new usb device get's added</param>
-        public USBConnector(Action<USBDevice> onUSBChange,Action onLoad = null)
+        public USBConnector(Action<USBDevice> onUSBChange = null, Action<IEnumerable<USBDevice>> onListUpdate = null, Action onLoad = null)
         {
             // Sets the callbacks
             this.onUSBChange = onUSBChange;
+            this.onListUpdate = onListUpdate;
             this.onLoad = onLoad;
 
             // Executes the first scan
@@ -123,9 +128,13 @@ namespace USBDetect
             // Updates the previous devices
             this.CurrentDevices = newDetected;
 
+            // Executes the event
+            this.onListUpdate?.Invoke(this.CurrentDevices);
+
             // Executes the event for every newly found device
-            foreach(var dev in newDevs)
-                this.onUSBChange(dev);
+            if(this.onUSBChange != null)
+                foreach(var dev in newDevs)
+                    this.onUSBChange(dev);
 
         }
 
