@@ -1,9 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WinUSBAuthentication
 {
@@ -17,10 +13,10 @@ namespace WinUSBAuthentication
         public static User Create(MySqlDataReader r)
         {
             return new User() {
-                Name = (String)r["username"], 
-                UsbID = r["USB-ID"] == DBNull.Value ? null : (String)r["USB-ID"], 
-                Pwhash = (String)r["pwhash"], 
-                Pwsalt = (String)r["pwsalt"] 
+                Name = (String)r["username"],
+                UsbID = r["USB-ID"] == DBNull.Value ? null : (String)r["USB-ID"],
+                Pwhash = (String)r["pwhash"],
+                Pwsalt = (String)r["pwsalt"]
             };
         }
     }

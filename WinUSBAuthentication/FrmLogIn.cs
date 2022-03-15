@@ -28,8 +28,6 @@ namespace WinUSBAuthentication
         {
             InitializeComponent();
             dbcon = new DBase(dbserver, dbdataBase, dbuser, dbpw);
-            
-            //Console.WriteLine(dbcon.AddUSBID("USB\\VID_4872&PID_81F1\\0X0001", "test9"));
         }
 
         /// <summary>
@@ -37,7 +35,26 @@ namespace WinUSBAuthentication
         /// </summary>
         /// <param name="devices">All found devices</param>
         private void OnUsbChange(USBDevice device) => Invoke(new Action(() => {
-            Console.WriteLine("New device detected: " + device);
+
+            try
+            {
+                // Tries to login the user
+                var user = dbcon.CompareUSBID(device);
+
+                if (user == null)
+                {
+                    MessageBox.Show("USB-Gerät wurde nicht gefunden, bitte nutzen Sie einen registrierten Dongle.", "Fehler beim Login");
+                    return;
+                }
+
+                MessageBox.Show("Benutzer " + user.Name + " wurde erfolgreich angemeldet", "Login erfolgreich");
+            }
+            catch
+            {
+                dbcon.CloseConnection();
+                MessageBox.Show("Fehler bei der Datenbankverbindung.", "Error");
+            }
+
         }));
         
         /// <summary>
@@ -53,15 +70,6 @@ namespace WinUSBAuthentication
         private void OnCloseButtonClicked(object sender, EventArgs e) => this.Close();
 
         private void OnFormLoad(object sender, EventArgs e) => usb = new USBConnector(this.OnUsbChange);
-
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-        }
-
-        public void ContinueLogin()
-        {
-            
-        }
 
         int mov;
         int movX;
@@ -103,7 +111,6 @@ namespace WinUSBAuthentication
         }
 
         private void btnLogin_Click_1(object sender, EventArgs e)
-        //ich will nach hause
         {
             if (tbUserName.Text == "" || tbPassword.Text == "")
             {

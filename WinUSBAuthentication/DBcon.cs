@@ -27,8 +27,8 @@ namespace WinUSBAuthentication
         ///     return true if the DeviceID are matching with the DeviceID in the database
         /// </summary>
         /// <param name="usb"></param>
-        /// <returns>System.<see cref="System.Boolean">Boolean</see></returns>
-        public bool CompareUSBID(USBDevice usb)
+        /// <returns>The user if the login usb-device belongs to a user, otherwise null</returns>
+        public User CompareUSBID(USBDevice usb)
         {
             con.Open();
 
@@ -42,11 +42,19 @@ namespace WinUSBAuthentication
             
             MySqlDataReader reader = cmd.ExecuteReader();
 
-            bool hans = reader.Read();
-            
+            if (!reader.Read())
+            {
+                // Kills the connection
+                CloseConnection();
+                return null;
+            }
+
+            // Gets the user
+            var user = User.Create(reader);
+
             CloseConnection();
             
-            return hans;
+            return user;
         }
         /*
         //public bool AddUSBID(USBDevice usb)

@@ -106,7 +106,7 @@ namespace WinUSBAuthentication.resources {
         }
         
         /// <summary>
-        ///   Sucht eine lokalisierte Zeichenfolge, die SELECT `USB-ID` FROM `usb-devices` WHERE `USB-ID` = @id ähnelt.
+        ///   Sucht eine lokalisierte Zeichenfolge, die SELECT * FROM `usb-devices` WHERE `USB-ID` = @id ähnelt.
         /// </summary>
         internal static string selectUSBID {
             get {

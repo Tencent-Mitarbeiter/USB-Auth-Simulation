@@ -8,7 +8,6 @@ using System.Windows.Forms;
 
 namespace USBDetect
 {
-
     public class USBDevice
     {
         public string DeviceID;
