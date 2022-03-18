@@ -88,11 +88,11 @@
             this.lregister.AutoSize = true;
             this.lregister.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lregister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(94)))), ((int)(((byte)(172)))));
-            this.lregister.Location = new System.Drawing.Point(82, 607);
+            this.lregister.Location = new System.Drawing.Point(78, 607);
             this.lregister.Name = "lregister";
-            this.lregister.Size = new System.Drawing.Size(186, 21);
+            this.lregister.Size = new System.Drawing.Size(205, 21);
             this.lregister.TabIndex = 5;
-            this.lregister.Text = "Dont have an Account?";
+            this.lregister.Text = "I Donot have an Account?";
             this.lregister.Click += new System.EventHandler(this.lregister_Click);
             // 
             // panelMoveFormLogin
