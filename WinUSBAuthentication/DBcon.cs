@@ -56,47 +56,6 @@ namespace WinUSBAuthentication
             
             return user;
         }
-        /*
-        //public bool AddUSBID(USBDevice usb)
-        public bool AddUSBID(String usb, String name, String pwhash, String pwsalt)
-        {
-            con.Open();
-
-            // Hier die SQL INSERT Query einfügen für das Hinzufügen einer USB-ID
-            // `ID` -> Auto_increment
-            // `USB-ID` -> Text
-            // `username` -> Text
-
-            //var sqlQuery = string.Format(datenbank., usb.DeviceID);
-
-            //var sqlQuery = $"INSERT INTO `usb-devices` (`ID`, `USB-ID`, `username`, `pwhash`, `pwsalt`) VALUES (NULL, '{usb}', '{name}', '{pwhash}', '{pwsalt}');";
-            //INSERT INTO `usb-devices` (`ID`, `USB-ID`, `username`, `pwhash`, `pwsalt`) VALUES (NULL, '{@usb}', '{@name}', '{@pwhash}', '{@pwsalt}');";
-
-           
-
-            MySqlCommand cmd = new MySqlCommand(datenbank.insertUSB, con);
-            //cmd.Parameters.AddWithValue("@id", usb);
-            //cmd.Parameters.AddWithValue("@name", name);
-            //cmd.Prepare();
-            
-            try
-            {
-                cmd.ExecuteReader();
-            } catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-                return false;
-            }
-
-            CloseConnection();
-
-            if (cmd.LastInsertedId > 0)
-            {
-                return true;
-            }
-            return false;
-        }*/
-
 
         public User GetByPassword(string username, string password)
         {
@@ -146,7 +105,6 @@ namespace WinUSBAuthentication
             {
                 pwsalt += (char)rdm.Next(1, 256);
             }
-            Console.WriteLine(datenbank.createUser);
             con.Open();
             MySqlCommand cmd = new MySqlCommand(datenbank.createUser, con);
             cmd.Parameters.AddWithValue("@name", username);
@@ -155,15 +113,7 @@ namespace WinUSBAuthentication
             cmd.Parameters.AddWithValue("@usb", null);
             cmd.Prepare();
 
-            try
-            {
-                cmd.ExecuteReader();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex);
-                return 0;
-            }
+            cmd.ExecuteReader();
 
             CloseConnection();
 
@@ -181,10 +131,6 @@ namespace WinUSBAuthentication
             cmd.Parameters.AddWithValue("@username", username);
             cmd.Parameters.AddWithValue("@pw", password);
             cmd.Prepare();
-
-            // Hier Crash
-
-            Console.WriteLine(cmd.CommandText);
 
             int rowsaffected = cmd.ExecuteNonQuery();
 

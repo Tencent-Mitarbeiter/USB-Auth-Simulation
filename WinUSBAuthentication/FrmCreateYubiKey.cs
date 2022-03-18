@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using USBDetect;
 
@@ -16,7 +11,7 @@ namespace WinUSBAuthentication
 
         private USBConnector usb;
 
-        DBase dbcon;
+        private DBase dbcon;
 
         public FrmCreateYubiKey(DBase dbcon)
         {
@@ -47,7 +42,6 @@ namespace WinUSBAuthentication
         private void lYkeybackr_Click(object sender, EventArgs e)
         {
             FrmCreateAcc frmca = new FrmCreateAcc(dbcon);
-
             this.Hide();
             frmca.ShowDialog();
             this.Close();
@@ -57,7 +51,7 @@ namespace WinUSBAuthentication
         {
             if (tbUsername.Text == "" && tbPassword.Text == "")
             {
-                MessageBox.Show("Die beiden Felder dürfen nicht leer sein!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Die beiden Felder dürfen nicht leer sein!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -67,11 +61,11 @@ namespace WinUSBAuthentication
 
                 if (success)
                 {
-                    MessageBox.Show("USB-ID Erfolgreich hinterlegt!", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("USB-ID Erfolgreich hinterlegt!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     lYKeyBack_Click(null, null);
 
                 }else
-                    MessageBox.Show("USB-ID konnte nicht hinterlegt werden!", "(╯°□°）╯︵ ┻━┻", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    MessageBox.Show("USB-ID konnte nicht hinterlegt werden!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                 dbcon.CloseConnection();
             }
             catch (Exception ex)

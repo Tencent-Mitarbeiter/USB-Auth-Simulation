@@ -56,20 +56,20 @@ namespace WinUSBAuthentication
         {
             if (!tbPassword.Text.Equals(tbConfPassword.Text))
             {
-                MessageBox.Show("Die beiden Passwörter stimmen nicht überein!", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Die (Joe) beiden Passwörter stimmen nicht überein!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             if (!(tbusername.Text != "" && tbPassword.Text != "" && tbConfPassword.Text != ""))
             {
-                MessageBox.Show("Bitte füllen sie alle Textboxen!", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Bitte füllen sie alle Textboxen!", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             try
             {
                 dbcon.CreateUser(tbusername.Text, tbConfPassword.Text);
-                MessageBox.Show("Der benutzer wurde Angelegt!", "Benutzer Erstellt", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Der Benutzer wurde angelegt!", "Benutzer erstellt", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 FrmLogIn frmli = new FrmLogIn();
                 this.Hide();
                 frmli.ShowDialog();
@@ -77,7 +77,7 @@ namespace WinUSBAuthentication
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "DB Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Datenbank-Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 dbcon.CloseConnection();
             }
         }

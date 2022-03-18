@@ -96,8 +96,7 @@ namespace USBDetect
                 return foundDevices;
             }
             // Ignores any exceptions
-            catch (Exception e) {
-                Console.WriteLine(e);
+            catch {
                 return default;
             }
         }

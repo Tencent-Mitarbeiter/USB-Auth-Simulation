@@ -1,12 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Management;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using USBDetect;
 
@@ -47,12 +39,15 @@ namespace WinUSBAuthentication
                     return;
                 }
 
-                MessageBox.Show("Benutzer " + user.Name + " wurde erfolgreich angemeldet", "Login erfolgreich");
+                // Opens the success form
+                this.Hide();
+                new FrmSuccess(user).ShowDialog();
+                this.Close();
             }
             catch
             {
                 dbcon.CloseConnection();
-                MessageBox.Show("Fehler bei der Datenbankverbindung.", "Error");
+                MessageBox.Show("Fehler bei der Datenbankverbindung.", "Datenbank-Fehler");
             }
 
         }));
@@ -116,7 +111,7 @@ namespace WinUSBAuthentication
         {
             if (tbUserName.Text == "" || tbPassword.Text == "")
             {
-                MessageBox.Show("Das Feld Username oder Password dürfen nicht leer sein", "", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Das Feld Username oder Password dürfen nicht leer sein", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -125,9 +120,15 @@ namespace WinUSBAuthentication
                 User user = dbcon.GetByPassword(tbUserName.Text.ToString(), tbPassword.Text.ToString());
                 
                 if(user == null)
-                    MessageBox.Show("(Nicht) Erfolgreich Eingeloggt", "Yeeeeeeeeeeeeeet", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                else
-                    MessageBox.Show("Erfolgreich Eingeloggt", "UIIIIIIIIIIIIII", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                {
+                    MessageBox.Show("Nicht erfolgreich eingeloggt", "Fehler", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                // Opens the success form
+                this.Hide();
+                new FrmSuccess(user).ShowDialog();
+                this.Close();
             }
             catch (Exception ex)
             {
